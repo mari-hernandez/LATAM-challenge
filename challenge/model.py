@@ -99,7 +99,7 @@ class DelayModel:
             target (pd.DataFrame): target.
         """
         self._model.fit(features, target)
-        self._model.get_booster().feature_names
+        self.top_10_features = self._model.get_booster().feature_names
 
     def predict(
         self,
